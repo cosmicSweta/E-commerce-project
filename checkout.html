@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | E-Shop</title>
+    <meta name="description" content="Enter your delivery details and place your E-Shop order.">
+    <meta name="theme-color" content="#0b1533">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232563eb'/%3E%3Cpath d='M10 12h12l-1 11H11zM13 12a3 3 0 0 1 6 0' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="announce">Free shipping on orders over &#8377;500</div>
+
+    <header class="site-header" id="site-header">
+        <div class="container nav-bar">
+            <a class="brand" href="index.html" aria-label="E-Shop home">
+                <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+                <span>E-Shop</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" data-auth-link>Log in</a>
+                <a class="cart-link" href="cart.html" aria-current="page">Cart <span class="cart-badge" data-cart-count>0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+
+        <div class="container">
+            <div class="page-head">
+                <h1>Checkout</h1>
+                <p id="checkout-subtitle">Enter your delivery details to place the order.</p>
+            </div>
+
+            <div class="checkout-layout" id="checkout-layout" hidden>
+                <form class="card checkout-form" id="checkout-form" novalidate>
+                    <section class="form-section" aria-labelledby="contact-heading">
+                        <h2 id="contact-heading">Contact</h2>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="name">Full name</label>
+                                <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" aria-describedby="name-error">
+                                <p class="field-error" id="name-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="phone">Mobile number</label>
+                                <input class="input" type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="10-digit mobile number" aria-describedby="phone-error">
+                                <p class="field-error" id="phone-error" hidden></p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email address</label>
+                            <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" aria-describedby="email-error">
+                            <p class="field-error" id="email-error" hidden></p>
+                        </div>
+                    </section>
+
+                    <section class="form-section" aria-labelledby="delivery-heading">
+                        <h2 id="delivery-heading">Delivery address</h2>
+                        <div class="field">
+                            <label for="address">House number and street</label>
+                            <input class="input" type="text" id="address" name="address" autocomplete="street-address" placeholder="House no., street, area" aria-describedby="address-error">
+                            <p class="field-error" id="address-error" hidden></p>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="city">City</label>
+                                <input class="input" type="text" id="city" name="city" autocomplete="address-level2" placeholder="City" aria-describedby="city-error">
+                                <p class="field-error" id="city-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="pincode">PIN code</label>
+                                <input class="input" type="text" id="pincode" name="pincode" autocomplete="postal-code" inputmode="numeric" maxlength="6" placeholder="6-digit PIN code" aria-describedby="pincode-error">
+                                <p class="field-error" id="pincode-error" hidden></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <fieldset class="form-section radio-group">
+                        <legend><h2>Payment</h2></legend>
+                        <label class="radio-card">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <div><strong>Cash on delivery</strong><span>Pay when your order arrives.</span></div>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="payment" value="upi">
+                            <div><strong>UPI on delivery</strong><span>Scan and pay when your order arrives.</span></div>
+                        </label>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top:24px">Place order</button>
+                </form>
+
+                <aside class="card summary" id="checkout-summary" aria-label="Order summary"></aside>
+            </div>
+
+            <div class="card empty" id="checkout-empty" hidden>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>
+                <h2>Your cart is empty</h2>
+                <p>Add a product before you check out.</p>
+                <a class="btn btn-primary" href="products.html">Browse products</a>
+            </div>
+
+            <div class="card empty" id="checkout-gate" hidden>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                <h2>Log in to place your order</h2>
+                <p>Your cart is saved. Log in or create an account to continue.</p>
+                <div class="gate-actions">
+                    <a class="btn btn-primary" href="login.html?next=checkout.html">Log in</a>
+                    <a class="btn btn-outline" href="register.html?next=checkout.html">Create an account</a>
+                </div>
+            </div>
+
+            <section class="card confirmation" id="confirmation" aria-labelledby="confirm-title" aria-live="polite" hidden></section>
+            <noscript><p class="muted">Turn on JavaScript to check out.</p></noscript>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand" href="index.html" aria-label="E-Shop home">
+                    <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+                    <span>E-Shop</span>
+                </a>
+                <p>Everyday gear at simple prices. A demo store built with HTML, CSS and JavaScript.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?category=Electronics">Electronics</a></li>
+                    <li><a href="products.html?category=Fashion">Fashion</a></li>
+                    <li><a href="products.html?category=Shoes">Shoes</a></li>
+                    <li><a href="products.html?category=Accessories">Accessories</a></li>
+                    <li><a href="products.html?category=Home">Home &amp; Living</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="cart.html">Your cart</a></li>
+                    <li data-logged-out><a href="login.html">Log in</a></li>
+                    <li data-logged-out><a href="register.html">Create an account</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span data-year>2026</span> E-Shop. Built by Sweta Singh.</p>
+            <a href="https://github.com/cosmicSweta/Final-Project">View the code on GitHub</a>
+        </div>
+    </footer>
+
+    <script src="data.js?v=4"></script>
+    <script src="common.js?v=4"></script>
+    <script src="auth.js?v=4"></script>
+    <script src="forms.js?v=4"></script>
+    <script src="checkout.js?v=4"></script>
+</body>
+
+</html>

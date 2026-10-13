@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop | Everyday gear, free shipping over ₹500</title>
+    <meta name="description" content="Shop headphones, watches, sneakers, backpacks and more. Free shipping on orders over ₹500.">
+    <meta name="theme-color" content="#0b1533">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232563eb'/%3E%3Cpath d='M10 12h12l-1 11H11zM13 12a3 3 0 0 1 6 0' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="announce">Free shipping on orders over &#8377;500</div>
+
+    <header class="site-header" id="site-header">
+        <div class="container nav-bar">
+            <a class="brand" href="index.html" aria-label="E-Shop home">
+                <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+                <span>E-Shop</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" data-auth-link>Log in</a>
+                <a class="cart-link" href="cart.html">Cart <span class="cart-badge" data-cart-count>0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-inner">
+                <div>
+                    <h1 id="hero-title">Good gear for everyday life.</h1>
+                    <p>Headphones, watches, sneakers and more, shipped free on orders over &#8377;500.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="products.html">Shop all products</a>
+                        <a class="btn btn-ghost" href="#categories">Browse categories</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="images/banner.jpg" alt="Illustration of a laptop, phone, headphones and camera floating above a shipping box" width="1000" height="883">
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="categories" aria-labelledby="categories-title">
+            <div class="container">
+                <div class="section-head">
+                    <h2 id="categories-title">Shop by category</h2>
+                </div>
+                <div class="category-grid" id="category-grid"></div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="featured-title">
+            <div class="container">
+                <div class="section-head">
+                    <h2 id="featured-title">Featured products</h2>
+                    <a href="products.html">View all products</a>
+                </div>
+                <div class="product-grid" id="featured-grid"></div>
+                <noscript><p class="muted">Turn on JavaScript to see the products.</p></noscript>
+            </div>
+        </section>
+
+        <section class="section" aria-label="Our promises">
+            <div class="container">
+                <div class="promises">
+                    <div class="promise">
+                        <span class="promise-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg></span>
+                        <div><h3>Free shipping</h3><p>On every order over &#8377;500.</p></div>
+                    </div>
+                    <div class="promise">
+                        <span class="promise-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h11a5 5 0 0 1 0 10H8"/><path d="M8 5L4 9l4 4"/></svg></span>
+                        <div><h3>Easy returns</h3><p>Send items back within 14 days.</p></div>
+                    </div>
+                    <div class="promise">
+                        <span class="promise-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+                        <div><h3>Pay on delivery</h3><p>Cash or UPI when your order arrives.</p></div>
+                    </div>
+                    <div class="promise">
+                        <span class="promise-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></span>
+                        <div><h3>Questions? Ask us</h3><p>Send a message from the contact page.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand" href="index.html" aria-label="E-Shop home">
+                    <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+                    <span>E-Shop</span>
+                </a>
+                <p>Everyday gear at simple prices. A demo store built with HTML, CSS and JavaScript.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html?category=Electronics">Electronics</a></li>
+                    <li><a href="products.html?category=Fashion">Fashion</a></li>
+                    <li><a href="products.html?category=Shoes">Shoes</a></li>
+                    <li><a href="products.html?category=Accessories">Accessories</a></li>
+                    <li><a href="products.html?category=Home">Home &amp; Living</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="cart.html">Your cart</a></li>
+                    <li data-logged-out><a href="login.html">Log in</a></li>
+                    <li data-logged-out><a href="register.html">Create an account</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span data-year>2026</span> E-Shop. Built by Sweta Singh.</p>
+            <a href="https://github.com/cosmicSweta/Final-Project">View the code on GitHub</a>
+        </div>
+    </footer>
+
+    <script src="data.js?v=4"></script>
+    <script src="common.js?v=4"></script>
+    <script src="auth.js?v=4"></script>
+    <script src="home.js?v=4"></script>
+</body>
+
+</html>
